@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Calculator" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ma-bx-RKn">
+                                <rect key="frame" x="107" y="20" width="107" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85A-eg-0rG">
+                                <rect key="frame" x="13" y="262" width="288" height="44"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="D01-tG-uU4"/>
+                                </constraints>
+                                <state key="normal" title="Calculate Tip">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tipCalculatorButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1oG-LK-jXB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHD-VC-wwP">
+                                <rect key="frame" x="113" y="432.5" width="101" height="20.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="Qer-UT-VeK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tip Percentage" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gZp-OH-nvp">
+                                <rect key="frame" x="16" y="166" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ddn-sN-ibz">
+                                <rect key="frame" x="14" y="216" width="289" height="31"/>
+                                <color key="tintColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="percentageSlider:" destination="vXZ-lx-hvc" eventType="valueChanged" id="iNt-PT-jNT"/>
+                                </connections>
+                            </slider>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your bill amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YJM-Lg-Xra">
+                                <rect key="frame" x="16" y="115" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gZp-OH-nvp" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="0Mz-eC-ZYs"/>
+                            <constraint firstItem="YJM-Lg-Xra" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="7bt-F1-BQ8"/>
+                            <constraint firstItem="ddn-sN-ibz" firstAttribute="top" secondItem="gZp-OH-nvp" secondAttribute="bottom" constant="20" id="96f-u5-7mT"/>
+                            <constraint firstItem="gZp-OH-nvp" firstAttribute="top" secondItem="YJM-Lg-Xra" secondAttribute="bottom" constant="21" id="DqB-bC-uhX"/>
+                            <constraint firstItem="85A-eg-0rG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-3" id="F2F-mg-VlY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ddn-sN-ibz" secondAttribute="trailing" constant="3" id="G6x-kb-qlS"/>
+                            <constraint firstAttribute="centerX" secondItem="9ma-bx-RKn" secondAttribute="centerX" constant="-0.5" id="GsZ-pE-HpX"/>
+                            <constraint firstItem="XHD-VC-wwP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="113" id="Oza-t9-lpP"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XHD-VC-wwP" secondAttribute="bottom" constant="115" id="Wae-Pu-CHs"/>
+                            <constraint firstItem="gZp-OH-nvp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Wwa-Uu-77f"/>
+                            <constraint firstItem="ddn-sN-ibz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ZRZ-S9-dc0"/>
+                            <constraint firstItem="85A-eg-0rG" firstAttribute="top" secondItem="ddn-sN-ibz" secondAttribute="bottom" constant="16" id="cuj-dv-AL6"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XHD-VC-wwP" secondAttribute="bottom" constant="115" id="dfw-L1-l5h"/>
+                            <constraint firstItem="YJM-Lg-Xra" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="exH-Vk-SPc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="85A-eg-0rG" secondAttribute="trailing" constant="3" id="fO0-4t-bwn"/>
+                            <constraint firstItem="YJM-Lg-Xra" firstAttribute="top" secondItem="9ma-bx-RKn" secondAttribute="bottom" constant="74.5" id="lHa-gg-kUd"/>
+                            <constraint firstItem="9ma-bx-RKn" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="tep-Kc-t9n"/>
+                            <constraint firstAttribute="trailing" secondItem="XHD-VC-wwP" secondAttribute="trailing" constant="106" id="tyg-c6-d6I"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dfw-L1-l5h"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="billAmountTextField" destination="YJM-Lg-Xra" id="TNS-Qh-r3Q"/>
+                        <outlet property="tipAmountLabel" destination="XHD-VC-wwP" id="zOk-Y6-8xQ"/>
+                        <outlet property="tipPercentageLabel" destination="gZp-OH-nvp" id="nlQ-7n-k4c"/>
+                        <outlet property="tipPercentageSlider" destination="ddn-sN-ibz" id="Dff-li-Z3Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331" y="259"/>
+        </scene>
+    </scenes>
+</document>
